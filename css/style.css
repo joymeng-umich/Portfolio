@@ -1,0 +1,125 @@
+body{
+    font-family: 'Nunito Sans', 'Nunito', sans-serif;
+
+}
+
+p{
+    font-size: 10em;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem 13rem 4rem 13rem;
+    overflow: hidden;
+
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0px; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    background-color: white;
+
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,.2);
+    margin-bottom: 20px;
+    z-index: 1;
+
+    transition:top 0.4s linear;
+}
+
+main{
+    position:relative;
+    top: 15rem;
+    margin-bottom: 15rem;
+}
+
+header a{
+    font-size:5em;
+    text-decoration: none;
+    color: green;
+}
+
+.current{
+    text-decoration: underline;
+    text-underline-offset: 0.8rem;
+}
+
+nav{
+    display: inline-flex;
+    flex-direction: row;
+    gap:7rem;
+}
+
+#name{
+    display:inline;
+    animation: shake 5s infinite;
+    font-weight: 900;
+}
+
+@keyframes shake{
+    0% { transform: rotate(0deg); }
+    96% { transform: rotate(0deg); }
+    97% { transform: rotate(3deg); }
+    98% { transform: rotate(0deg); }
+    99% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+#name:hover{
+    animation: shake-focus 0.5s infinite;
+}
+@keyframes shake-focus{
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+
+footer p{
+    font-size: 3.5em;
+    color:dimgray;
+}
+footer{
+    display:flex;
+    padding: 4rem 13rem 4rem 13rem;
+    align-items: center;
+    justify-content:center ;
+
+}
+
+.resume{
+
+    width:fit-content;
+    height:fit-content;
+
+}
+
+
+#content_progress {
+    /* Positioning */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    color: green;
+}
+
+#content_progress::-webkit-progress-bar {
+    background-color: transparent;
+}
+
+#content_progress::-webkit-progress-value {
+    background-color: green;
+}
+
+#content_progress::-moz-progress-bar {
+    background-color: green;
+}
