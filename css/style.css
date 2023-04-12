@@ -14,13 +14,13 @@ b{
 }
 
 
-div{
+/* div{
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+} */
 
-}
 header{
     
     display: flex;
@@ -39,7 +39,7 @@ header{
     background-color: white;
 
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,.2);
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     z-index: 1;
 
     transition:top 0.5s linear;
@@ -51,8 +51,15 @@ header{
 
 main{
     position:relative;
-    top: 3rem;
-    margin: 3rem 0 6rem 0;
+    margin: 64px 0 0 0;
+}
+
+header p{
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: green;
+
+
 }
 
 header a{
@@ -108,7 +115,7 @@ nav{
 
 
 footer p{
-    font-size: 1rem;
+    font-size: 0.7rem;
     color:dimgray;
 }
 
@@ -182,78 +189,19 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 #about img{
     border-radius: 50%;
     width: 70%;
-    max-width: 400px;
+    max-width: 300px;
+    margin-top: 32px;
 }
 
 #about div{
     padding:0 10% 0 10%
 
 }
-
-@media screen and (min-width: 500px){
-
-    header{
-
-        flex-direction: row;
-        padding: 0.8rem 3rem 0.8rem 3rem;
-        justify-content: space-between;
-    }
-
-    nav{
-        border:none;
-        position: static;
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        gap:10%;
-        margin-top: 0;
-        padding:0;
-        width: fit-content;
-        
-
-        
-    }
-
-
-
-    #dropdown{
-        display: none;
-    }
-
-
-}
-
-
-@media screen and (min-width: 768px){
-    #about{
-        display: grid;
-        grid-template-columns: 40% 60%;
-
-        
-    }
-
-#about img{
-        grid-column: 1 / 2;
-
-
-            width: 90%;
-
-
-        justify-self: flex-end;
-        
-    }
-}
-
-
-
-
-
 
 
 #name{
@@ -286,44 +234,128 @@ h1{
     font-weight: 800;
 }
 
+
+
+
+
+
   /* personal */
 
   
 #personalhtml, #personalbody{
     height:100vh;
+    /* overflow: hidden; */
 }
 
 #personalbody{
     margin: 0;
+    /* background-color: black; */
 }
+
+#personalbody main {
+    height: calc(100vh - 64px);
+} 
 
 #sscontainer{
     height:100%;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     scroll-snap-stop: always;
-
 }
 
 #sscontainer section{
-    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 64px);
+    width: 100%;
     text-align: center;
     margin:0 auto;
-    scroll-snap-align: start;
+    scroll-snap-align: end;
 }
 
-  /* #gallery {
+.gallery {
     scroll-snap-type: x mandatory;
+
+    /* overflow-y: auto; */
+    /* overscroll-behavior-x: contain; */
     overflow-x: scroll;
     display: flex;
     flex-direction: row;
+    scroll-snap-stop: always;
+
+    display: grid;
+    grid-auto-flow: column;
+
+    gap: 1rem;
+
+    height: calc(180px + 1rem);
+
+
+
   }
   
-  #gallery img {
+.gallery img{
      scroll-snap-align: center;
-     max-height: 100vh;
-  } */
+     max-height: calc(100vh - 64px);
+     object-fit: contain;
+     border-radius: 0.5rem;
+
+  }
+
+
+
+@media screen and (min-width: 500px){
+
+    header{
+
+        flex-direction: row;
+        padding: 0.8rem 3rem 0.8rem 3rem;
+        justify-content: space-between;
+    }
+
+    nav{
+        border:none;
+        position: static;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap:10%;
+        margin-top: 0;
+        padding:0;
+        width: fit-content;
+        
+    }
+
+    #dropdown{
+        display: none;
+    }
 
 
 
 
+    
+
+
+}
+
+
+@media screen and (min-width: 768px){
+    #about{
+        display: grid;
+        grid-template-columns: 40% 60%;
+
+        
+    }
+
+#about img{
+        grid-column: 1 / 2;
+
+
+        width: 90%;
+
+        max-width: 300px;
+        justify-self: flex-end;
+        
+    }
+}
