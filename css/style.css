@@ -1,11 +1,8 @@
 body{
-    font-family: 'Nunito Sans', 'Nunito', sans-serif;
+    font-family: 'Nunito', sans-serif;
 
 }
 
-p{
-    font-size: 10em;
-}
 
 header{
     display: flex;
@@ -52,7 +49,7 @@ nav{
 #name{
     display:inline;
     animation: shake 5s infinite;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 @keyframes shake{
@@ -123,3 +120,46 @@ footer{
 #content_progress::-moz-progress-bar {
     background-color: green;
 }
+
+h1{
+    font-size: 8rem;
+
+}
+
+h1 b{
+    font-size: 8rem;
+    font-weight: 700;
+}
+
+h1 i{
+    font-size: 8rem;
+}
+
+#about{
+    display: grid;
+    grid-template-columns: 35% 35%;
+    /* column-gap: 5%; */
+    justify-content: center;
+    align-items: center;
+
+    margin: 15rem 0 30rem 0;
+
+}
+
+#about img{
+    grid-column: 1 / 2;
+    border-radius: 50%;
+    width: 80%;
+    justify-self: center;
+    
+
+}
+#selfintro{
+    display:flex;
+    flex-direction: column;
+    grid-column: 2 / 3;
+    justify-content: center;
+    text-align: center;
+    line-height: 14rem;
+}
+
