@@ -1,23 +1,32 @@
+/* general */
+
 body{
     font-family: 'Nunito', sans-serif;
 
 }
 
+p{
+    font-size: 1.3rem;
+}
+
+b{
+    font-weight: 800;
+}
 
 header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 4rem 13rem 4rem 13rem;
+    padding: 0.8rem 3rem 0.8rem 3rem;
     overflow: hidden;
 
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0px; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    position: fixed;
+    top: 0px; 
+    width: 100%; 
     background-color: white;
 
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,.2);
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     z-index: 1;
 
     transition:top 0.4s linear;
@@ -25,72 +34,55 @@ header{
 
 main{
     position:relative;
-    top: 15rem;
-    margin-bottom: 15rem;
+    top: 3rem;
+    margin: 3rem 0 6rem 0;
 }
 
 header a{
-    font-size:5em;
+    font-size:1.3rem;
     text-decoration: none;
     color: green;
 }
 
 .current{
     text-decoration: underline;
-    text-underline-offset: 0.8rem;
+    text-underline-offset: 0.3rem;
 }
 
 nav{
     display: inline-flex;
     flex-direction: row;
-    gap:7rem;
+    gap:2rem;
 }
-
-#name{
-    display:inline;
-    animation: shake 5s infinite;
-    font-weight: 600;
-}
-
-@keyframes shake{
-    0% { transform: rotate(0deg); }
-    96% { transform: rotate(0deg); }
-    97% { transform: rotate(3deg); }
-    98% { transform: rotate(0deg); }
-    99% { transform: rotate(-3deg); }
-    100% { transform: rotate(0deg); }
-  }
-
-#name:hover{
-    animation: shake-focus 0.5s infinite;
-}
-@keyframes shake-focus{
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(3deg); }
-    50% { transform: rotate(0eg); }
-    75% { transform: rotate(-3deg); }
-    100% { transform: rotate(0deg); }
-  }
 
 
 footer p{
-    font-size: 3.5em;
+    font-size: 1rem;
     color:dimgray;
 }
+
 footer{
     display:flex;
-    padding: 4rem 13rem 4rem 13rem;
+    padding: 1rem 3rem 1rem 3rem;
     align-items: center;
-    justify-content:center ;
+    justify-content:center;
+    gap: 1rem;
 
 }
-
-.resume{
-
-    width:fit-content;
-    height:fit-content;
-
+footer i{
+    cursor: pointer;
 }
+
+#linkedin{
+    color: #1E3050;
+}
+
+#backtotop{
+    color: green;
+}
+html {
+    scroll-behavior: smooth;
+  }
 
 
 #content_progress {
@@ -122,44 +114,89 @@ footer{
 }
 
 h1{
-    font-size: 8rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 
 }
 
-h1 b{
-    font-size: 8rem;
-    font-weight: 700;
-}
 
-h1 i{
-    font-size: 8rem;
-}
+/* About */
+
 
 #about{
     display: grid;
-    grid-template-columns: 35% 35%;
-    /* column-gap: 5%; */
-    justify-content: center;
+    grid-template-columns: 40% 45%;
+    justify-content: start;
     align-items: center;
-
-    margin: 15rem 0 30rem 0;
-
+    gap:5%;
 }
+
 
 #about img{
     grid-column: 1 / 2;
     border-radius: 50%;
-    width: 80%;
-    justify-self: center;
+    width: 90%;
+    max-width: 400px;
+    justify-self: flex-end;
     
+}
 
+
+
+#name{
+    display:inline;
+    animation: shake 5s infinite;
+    font-weight: 600;
 }
-#selfintro{
-    display:flex;
+
+@keyframes shake{
+    0% { transform: rotate(0deg); }
+    96% { transform: rotate(0deg); }
+    97% { transform: rotate(3deg); }
+    98% { transform: rotate(0deg); }
+    99% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+#name:hover{
+    animation: shake-focus 0.5s infinite;
+}
+@keyframes shake-focus{
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+
+
+  /* personal */
+  #personal {
+    display: flex;
     flex-direction: column;
-    grid-column: 2 / 3;
-    justify-content: center;
-    text-align: center;
-    line-height: 14rem;
-}
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+  
+  #personal > div{
+     scroll-snap-align: center;
+     height: 100vh;
+     width: 100vw;
+  }
+
+  #gallery {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #gallery img {
+     scroll-snap-align: center;
+     max-height: 100vh;
+  }
 
