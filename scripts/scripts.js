@@ -11,6 +11,7 @@ window.onscroll = function() {
     document.querySelector("header").style.top = "0";
   } else {
     document.querySelector("header").style.top = "-4rem";
+    document.querySelector("header").style.overflow = "hidden"
   }
 }
 
@@ -40,4 +41,13 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   
+}
+
+
+function dropDown() {
+  if (document.querySelector("header").style.overflow == "hidden"){
+    document.querySelector("header").style.overflow = "visible"
+  } else{
+    document.querySelector("header").style.overflow = "hidden"
+  }
 }

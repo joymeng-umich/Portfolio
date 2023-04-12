@@ -22,15 +22,20 @@ div{
 
 }
 header{
+    
     display: flex;
     flex-direction: row;
+
+    align-items: center;
     justify-content: space-between;
-    padding: 0.8rem 3rem 0.8rem 3rem;
+
     overflow: hidden;
 
     position: fixed;
     top: 0px; 
     width: 100%; 
+    height: 4rem;
+
     background-color: white;
 
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,.2);
@@ -40,6 +45,8 @@ header{
     transition:top 0.5s linear;
 
     opacity: 96%;
+    padding: 0 2rem 0 2rem;
+
 }
 
 main{
@@ -49,9 +56,15 @@ main{
 }
 
 header a{
-    font-size:1.3rem;
+    font-size:1.6rem;
     text-decoration: none;
     color: green;
+    /* padding:1rem 0 1rem 0; */
+}
+
+nav a {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
 }
 
 .current{
@@ -59,11 +72,39 @@ header a{
     text-underline-offset: 0.3rem;
 }
 
+
 nav{
-    display: inline-flex;
-    flex-direction: row;
-    gap:2rem;
+    
+    align-self: baseline;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    /* display:none; */
+    background-color: white;
+    opacity: 100%;
+    position: absolute;
+    top:4rem;
+    right:0;
+    width: 100%;
+    border-top: solid 1px rgb(224, 241, 224);
+    padding: 1rem 0 1rem 0;
+    
+
+
+
+
+    
+
 }
+
+#dropdown{
+    line-height: 4rem;
+    text-align: end;
+    cursor: pointer;
+}
+
+
 
 
 footer p{
@@ -126,7 +167,7 @@ html {
 h1{
     font-size: 2rem;
     font-weight: 600;
-    text-align: center;
+    /* text-align: center; */
     padding-top: 1rem;
     padding-bottom: 2rem;
 
@@ -137,22 +178,81 @@ h1{
 
 
 #about{
-    display: grid;
-    grid-template-columns: 40% 45%;
-    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap:5%;
-}
 
+}
 
 #about img{
-    grid-column: 1 / 2;
     border-radius: 50%;
-    width: 90%;
+    width: 70%;
     max-width: 400px;
-    justify-self: flex-end;
-    
 }
+
+#about div{
+    padding:0 10% 0 10%
+
+}
+
+@media screen and (min-width: 500px){
+
+    header{
+
+        flex-direction: row;
+        padding: 0.8rem 3rem 0.8rem 3rem;
+        justify-content: space-between;
+    }
+
+    nav{
+        border:none;
+        position: static;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap:10%;
+        margin-top: 0;
+        padding:0;
+        width: fit-content;
+        
+
+        
+    }
+
+
+
+    #dropdown{
+        display: none;
+    }
+
+
+}
+
+
+@media screen and (min-width: 768px){
+    #about{
+        display: grid;
+        grid-template-columns: 40% 60%;
+
+        
+    }
+
+#about img{
+        grid-column: 1 / 2;
+
+
+            width: 90%;
+
+
+        justify-self: flex-end;
+        
+    }
+}
+
+
+
+
 
 
 
