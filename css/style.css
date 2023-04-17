@@ -5,8 +5,31 @@ body{
 
 }
 
-p{
+p, li{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+br{
+    padding-bottom: 1rem;
+}
+h1{
     font-size: 1.3rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+h3
+{
+    font-size: 1rem;
+    font-weight: 500;
+
+    padding-top: 1rem;
 }
 
 b{
@@ -40,7 +63,7 @@ header{
 
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,.2);
     /* margin-bottom: 1rem; */
-    z-index: 1;
+    z-index: 100;
 
     transition:top 0.5s linear;
 
@@ -121,12 +144,13 @@ footer p{
 
 footer{
     display:flex;
-    padding: 6rem 3rem 3rem 3rem;
+    padding: 3rem;
     align-items: center;
     justify-content:center;
     gap: 1rem;
 
 }
+
 footer a{
     cursor: pointer;
     text-decoration: none;
@@ -172,14 +196,7 @@ html {
     background-color: green;
 }
 
-h1{
-    font-size: 2rem;
-    font-weight: 600;
-    /* text-align: center; */
-    padding-top: 1rem;
-    padding-bottom: 2rem;
 
-}
 
 
 /* About */
@@ -204,6 +221,14 @@ h1{
 
 }
 
+h1.about{
+
+
+    /* text-align: center; */
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+}
 
 #name{
     display:inline;
@@ -237,14 +262,11 @@ h1{
 
 
 
-
-
-
   /* personal */
 
   
 #personalhtml, #personalbody{
-    height:100vh;
+    height:calc(100vh - 64px);
     /* overflow: hidden; */
 }
 
@@ -311,12 +333,15 @@ h1{
      height: calc(100vh - 64px);
      object-fit: contain;
      border-radius: 0.5rem;
+     padding: 0;
   }
 
 
+  /* index */
+
 
 .covercontainer{
-    /* padding-top: 3rem; */
+    padding-top: 3vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -324,24 +349,26 @@ h1{
 }
 
 .cover{
-    width: 100vw;
-    padding: 4rem 2rem 4rem 2rem;
+    width: 80%;
+    margin: 1.5rem 1rem;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
 }
 
 .cover img{
-    opacity: 1;
+  /* opacity: 1; */
   display: block;
   width: 100%;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
   max-width: 540px;
+  z-index: 1;
 
 }
 
@@ -349,17 +376,32 @@ h1{
     transition: .5s ease;
     opacity: 0;
     position: absolute;
-    top: 50%;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: white;
+    /* top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); */
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
 }
+
 .ctext{
-    background-color: #04AA6D;
-    color: white;
-    /* font-size: 16px; */
-    /* padding: 16px 32px; */
+    /* background-color: green; */
+    /* color: green; */
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    opacity: 1;
+    z-index: 10;
+
+    /* border-radius: 1rem; */
 }
 
 .cover:hover img{
@@ -367,13 +409,123 @@ h1{
   }
 
 .cover:hover .middle {
-    opacity: 1;
+    opacity: 0.8;
   }
+.cover:hover .ctext{
+    opacity: 1;
+}
+
+#usda{
+    width: 80%;
+}
 
 
+/* portfolio */
+
+.indexes{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    opacity: 70%;
+    box-shadow: 0 0 5px 5px #fff; 
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 5px;
+    z-index: 95;
+}
+
+
+
+.index{
+    display:flex;
+    flex-direction: row;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+
+
+}
+
+.blackpoint{
+    display:none;
+}
+
+.indexes a{
+    display:none;
+    text-decoration: none;
+    color: green;
+    padding-right: 1vw;
+    font-weight: 400;
+
+}
+
+.topimage img{
+    position: relative;
+    width: 100vw;
+    z-index: 99;
+
+}
+
+section{
+    display:flex;
+    flex-direction: column;
+}
+
+/* section.text{
+    padding:1rem 10vw ;
+} */
+
+section.title{
+
+    padding:1rem 15vw ;
+}
+
+section.title h1{
+    padding-bottom: 1rem;
+    
+}
+
+section.text h2, section.text h3, section.text p, section ul{
+
+    padding:1rem 10vw ;
+}
+
+section img{
+    padding:0 10vw;
+}
+
+.twocol{
+    padding:1rem 10vw 2rem;
+}
+
+.twocol img{
+
+        padding:0;
+}
+
+section video {
+    align-self: center;
+    width:80vw;
+    max-width: 300px;
+    padding-bottom: 2rem;
+}
+
+.prototype{
+    width: 90vw;
+    height:80vh;
+    align-self: center;
+    padding-bottom: 2rem;
+
+}
 
 
 @media screen and (min-width: 500px){
+
+    p, h3, li{
+        font-size: 1.2rem;
+    }
 
     header{
 
@@ -398,12 +550,66 @@ h1{
     #dropdown{
         display: none;
     }
+    
+    footer{
+        padding: 5vh 3rem 5vh 3rem;
+    
+    }
 
+    .index{
+
+        font-size: 0.7rem;
+        padding-bottom: 0.5vw;
+    }
+
+    /* .indexes a{
+        display:block;
+    } */
+
+
+    
+    section.title{
+        padding-top: 0.5rem;
+    }
+    
+
+    section.text h2, section.text h3, section.text p, section ul{
+        padding:1rem 15vw ;
+    }
+
+    #beforeafter{
+        width:100%;
+        max-width: 1000px;
+        align-self: center;
+    }
+
+    .prototype{
+        width: 80vw;
+    }
 
 }
 
 
 @media screen and (min-width: 768px){
+    /* p, h3, li{
+        font-size: 1.4rem;
+    } */
+
+
+    h1{
+        font-size: 3vw;
+    }
+
+    h2{
+        font-size: 2.5vw;
+        /* font-weight: 600; */
+        /* padding-bottom: 0.5rem; */
+    }
+    
+    h3{
+        font-size:1.4rem
+    }
+
     #about{
         display: grid;
         grid-template-columns: 40% 60%;
@@ -424,7 +630,11 @@ h1{
         padding:10% 30% 0 10%;
     
     }
+    /* .gallery img{
+        padding:0 10vw;
+    } */
 
+ 
     .covercontainer{
         /* padding-top: 3rem; */
         display: grid;
@@ -437,5 +647,23 @@ h1{
 
     .cover{
         width: 80%;
+    }
+
+        .index{
+
+        font-size: 1.5vw;
+    }
+
+    .indexes{
+        padding-right: 1rem;
+    }
+    
+    .twocol{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        /* padding:2rem 0; */
+    }
+    .prototype{
+        width: 60vw;
     }
 }
