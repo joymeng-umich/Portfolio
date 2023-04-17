@@ -489,11 +489,15 @@ section.title h1{
 
 section.text h2, section.text h3, section.text p, section ul{
 
-    padding:1rem 10vw ;
+    padding:0rem 10vw 1rem;
+}
+
+section h3{
+    text-align: center;
 }
 
 section img{
-    padding:0 10vw;
+    padding:0 10vw 2rem;
 }
 
 .twocol{
@@ -574,7 +578,7 @@ section video {
     
 
     section.text h2, section.text h3, section.text p, section ul{
-        padding:1rem 15vw ;
+        padding:0rem 15vw 1rem;
     }
 
     #beforeafter{
