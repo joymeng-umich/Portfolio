@@ -248,6 +248,11 @@ h1.about{
 #name:hover{
     animation: shake-focus 0.5s infinite;
 }
+
+#name:active{
+    animation: shake-focus 0.5s infinite;
+}
+
 @keyframes shake-focus{
     0% { transform: rotate(0deg); }
     25% { transform: rotate(3deg); }
