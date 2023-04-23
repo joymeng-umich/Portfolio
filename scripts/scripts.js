@@ -178,3 +178,15 @@ window.onscroll = function() {
 
   }
 }
+
+const gallery = document.querySelectorAll('.gallery');
+const arrow = document.querySelector('#sscontainer i')
+
+// gallery.forEach((e) =>{
+//   e.currentTarget.on("scroll", function (e) {
+//     let horizontal = e.currentTarget.scrollLeft;
+//     console.log(horizontal)
+//     arrow.style.display = none;
+    
+//     })
+//   })
