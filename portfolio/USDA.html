@@ -42,17 +42,14 @@
 
   </div>
   <div id="index2" class="index">
-    <a class="skip" href="#sec2">Solution</a>
+    <a class="skip" href="#sec2">Process</a>
     <div class="blackpoint">●</div>
     <div class="circlepoint">○</div>
 
   </div>
-  <div id="index3" class="index">
-    <a class="skip" href="#sec3">Process</a>
-    <div class="blackpoint">●</div>
-    <div class="circlepoint">○</div>
 
-  </div>
+
+
   <div id="index4" class="index">
     <a class="skip" href="#sec4">What I learned</a>
     <div class="blackpoint">●</div>
@@ -62,15 +59,12 @@
 </div>
 
 <div class="topimage">
-  <img src="../img/GONG/gongtop.jpg" alt="">
-  <!-- todo: cut the upper side of the photpo -->
+  <img src="../img/usda/Logo_of_the_United_States_Department_of_Agriculture.svg" id="usdatop" alt="">
   </div>
 
   <section class="title">
-    <h1>
-      GONG<br>Archery Community Engagement
-    </h1>
-    <p>UX Research & Design<br>2022 Fall</p>
+    <h1>U.S. Department of Agriculture<br>Usability Test of ACIR</h1>
+    <p>UX Research & Consulting Project<br>2023 Winter</p>
 
     </section>
 
@@ -78,9 +72,9 @@
 <section id="sec1" class="text">
 <h2>Context</h2>
 <p>In 2022, The U.S. Department of Agriculture developed a database named “Agricultural Commodity Import Requirements” (ACIR), providing a single source to search for and retrieve entry requirements for imported commodities. Users can check ACIR to see if importing a certain commodity need a permit. 
-
-  Being the replacement for the manuals, ACIR has been doing a great job saving users’ time. Users no longer have to figure out how to use the index of a long book, all they need to do is a simple search. However, the user experience of ACIR needs to be improved, as some users are still asking for orientation and training or simply turning back to the old manuals. 
-  
+<br><br>
+  Being the replacement for the manuals, ACIR has been doing a great job saving users' time. Users no longer have to figure out how to use the index of a long book, all they need to do is a simple search. However, the user experience of ACIR needs to be improved, as some users are still asking for orientation and training or simply turning back to the old manuals. 
+  <br><br>
   Therefore, we participated in the development of ACIR beginning 2023 as a usability team, aiming to fix the existed bugs and imperfect design and make the search experience more intuitive.   
 </p>
 
@@ -88,77 +82,80 @@
 
 
 <section id="sec2" class="text">
-  <h2>Solution</h2>
-  <!-- <img src="../img/GONG/gongsolution.png"> -->
+  <h2>Process</h2>
+  <h3>
+    Interaction Map
+  </h3>
   <p>
-  My solution is to build a mobile app, to realize better information management for both the organization managers and the members. It relieves the board members from arduous information collecting and delivering so that they can focus on holding interesting events and provide better training service. The data generating and disseminating work will be distributed to the users and the app. More importantly, the users, who have been unconsciously helping the manager record data, will probably become a real archery lover with the help of the app. <br> 
+    The first thing we did was to get familiar with the system. In addition to internet research and getting information directly from our client, we tested every feature / page on the site ourselves and generated this interaction map. This might not be a deliverable for our client, but this did ensure our familiarity with the product. 
   </p>
-  <h3>How?</h3><img id='beforeafter' src="../img/GONG/gongsolution2.jpeg">
-    <p>The system will automatically generate a visualization of the users' progress on archery to highlight their milestones, which makes it more fun and way easier for the users to track their own progress and build perseverance. At the same time, their personal records will have the chance to be posted within the community, which will motivate the users and cultivate a positively competitive environment. 
+
+<img src="../img/usda/map.png" alt="">
+<h3>
+  Interview
+</h3>
+    <p>2 interviews with our client helped us determine the scope and priority of the project.
+     And 5 interviews with the users were conducted to understand their current attitude, need, and pain point.</p>
+     <p>
+      At this stage, we are not already doing the usability test. What we were focusing on are the behavior, attitude, and aptitude of the users and the technical, business, and environmental context behind these. 
   </p>
+  <p>After synthesizing all the qualitative data we collected through interview, I was able to generate an affinity wall that clustered related information together to give us some clues about the users need and pain points. </p>
+    <img src="../img/usda/DIAGRAM.png" alt="">
+
+
+  <h3>
+    Comparative Evaluation
+  </h3>
+  <p>
+    ACIR is a unique tool provided by the government, but we still managed to find four “competitors” to compare its strengths and weaknesses with to come up with recommendation for improvement. 
+    </p>
+    <p>
+      For example, we chose AIRS (Canadian version of ACIR) to learn how they guide user and arrange search process, and FSIS's import library for the information organization of search result. The manual, as the old way of doing things was also selected to better understand what ACIR is built on and what improvement it has brought. 
+    </p>
+    <p>
+      Though we do have priority and target when we are comparing ACIR with different platform, a set of criteria was created to uniform the comparing process and findings. According to the major issues we found from early research, we classified our comparing goal into 4 classes
+    </p>
+
+    <!-- todo:** Criteria**
+      •	Overall Navigation
+      •	Searching process (input, filter…)
+      •	Display of results
+      •	Help section -->
+
   
-  <div class="twocol">
-    <img src="../img/GONG/prototype1.png" alt="">
-    <img src="../img/GONG/prototype2.png" alt="">
-  </div>
+ <h3>
+  Heuristic Evaluation
+ </h3>
 
+ <p>
+  Our team employed Nielsen's hueristics to assess the system's usability, questions for each Heuristic are tailored depending on our research goal and relevance with ACIR. After individual evaluations were conducted by each team member, we aggregate and synthesize individual evaluation to generate the outcome for each issue and its severity. 
+  
+  </p>
+    <!-- todo: hueristics and questions -->
+
+<h3>Usability Test</h3>
+ <p>
+  We conducted 6 usability tests with current users to observe real user experience with ACIR. 
+</p>
+<p>
+  Being able to develop test tasks based on all we have gained from former research, we quickly defined the goals of each task, reflecting serious issues of the system and our clients need. Then, each task was elaborated into simple and understandable sentences for better “UX”. 
+  </p>
+<p>During the test, we put an emphasis making the user comfortable, telling them “It's the system's fault if you stuck somewhere”. We also managed to keep the interview process flexible by being familiar with the system and keeping task goal in mind so that even when the user accidentally got into unexpected situation, we were able to give appropriate hint to accomplish our test goal without directly tell them what to do. </p>
+
+  <!-- todo: screenshot from usability test-->
 
 
 </section>
-
-<section id="sec3" class="text">
-<h2>Process</h2>
-<h3>Ethnography Research</h3>
-<img src="../img/GONG/DSC04195.JPG">
-<p>Ethnography research is a immersive field study approach that enable UX researchers to really observe and experience their target community or user, to gain deep and detailed insight about the needs, goals, pain points and motivations.<br>I didn't intentionally conduct ethnography research, which makes my data gathering about this community even more successful - I actually participated into the training, the management and the competition within Shanghai University's Traidtion Archery Club for three years. This is how I get the original data about what this organization need, how it is run and how to effectively engage all the members.</p>
-
-
-<h3>Personas</h3>
-<img src="../img/GONG/User persona gong.png" alt="">
-<p>
-Based on the data gathered from former ethnography research and several additional interview, I created 4 personas to comprehesively represent different users' goals and needs. The process creating personas let me discover some user needs that I had being looking over such as the goal of getting socialized. Therefore, personas did a great job helping me construct a engagement system that utilizing multiple motivations of users. 
-</p>
-
-
-
-
-<h3>Scenario</h3>
-<p>
-  <!-- ---todo--- -->
-</p>
-<!-- <img> ---todo--- -->
-
-<h3>QOC</h3>
-<img src="../img/GONG/qoc.png">
-
-<!-- ---todo--- -->
-
-<h3>Paper Prototye</h3>
-<video controls>
-  <source src="../img/GONG/paper prototype final.mp4" type="video/mp4">
-  <!-- <source src="movie.ogg" type="video/ogg"> -->
-  Your browser does not support the video tag.
-</video>
-<p>
- Me being a professional about archery community might give me too much confidence leading to arbitrary judgement. The paper prototype is another key method I utilized to overcome this. <br>
-  I tested the paper prototype with 3 current members of the community to confront my potential subjective impression and keep up with the newest change.
-</p>
-
-
-<h3>Digital Prototye</h3>
-<div class="prototype">
-  <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FG5gVA0SL6lXcDLv8Cl29OG%2FArchery-Community%3Fpage-id%3D0%253A1%26node-id%3D65-765%26viewport%3D134%252C108%252C0.07%26scaling%3Dscale-down%26starting-point-node-id%3D65%253A765%26show-proto-sidebar%3D1" allowfullscreen></iframe>
-</div>
-
-</section>
+<section id="sec3" class="text"></section>
 
 <section id="sec4" class="text">
 <h2>What I Learned</h2>
 <ul style="list-style-type:disc;">
-  <li>
-  Creating prototype is like coding, the concept of object and inheritance make it eaiser. </li>
-  <li>
-  Even most basic visual design has direct affect on user experience, such as the right font size, color and layout of the elements.</li>
+  <li>Research and evaluation before actual usability test is necessary for the success of task design and test implementation. </li>
+<li>The design of each usability task requires deep knowledge of the product and continuous iteration, and clear objectives for testing. </li>
+<li>The quantity of usability test is less important than the quality of it.</li>
+<li>Even though mostly we sit back and observe when conducting usability test, a good facilitator should learn when to be proactive to keep the user on track and accomplish the test goal flexibly.</li>
+
   </ul>    
 </section>
       </main>

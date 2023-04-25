@@ -15,21 +15,22 @@ br{
 }
 h1{
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 h2{
     font-size: 1.2rem;
-    font-weight: 600;
-    padding-bottom: 0.5rem;
+    font-weight: 700;
+    /* padding-bottom: 0.5rem; */
+    padding-top: 1.5rem;
 }
 
 h3
 {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600    ;
 
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 }
 
 b{
@@ -504,6 +505,7 @@ section.title{
     padding:1rem 15vw ;
 }
 
+
 section.title h1{
     padding-bottom: 1rem;
     
@@ -511,8 +513,9 @@ section.title h1{
 
 
 section.text h2, section.text h3, section.text p, section ul{
-
-    padding:0rem 10vw 1rem;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    /* padding:1.5rem 10vw 1rem; */
 }
 
 /* section h3{
@@ -520,16 +523,7 @@ section.text h2, section.text h3, section.text p, section ul{
 } */
 
 section img{
-    padding:0 10vw 2rem;
-}
-
-.twocol{
-    padding:1rem 10vw 2rem;
-}
-
-.twocol img{
-
-        padding:0;
+    padding:1rem 10vw 1rem;
 }
 
 section video {
@@ -541,10 +535,34 @@ section video {
 
 .prototype{
     width: 90vw;
-    height:80vh;
+    height:90vh;
     align-self: center;
     padding-bottom: 2rem;
 
+}
+
+
+.twocol{
+    padding:1rem 10vw 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.twocol img{
+    padding:0;
+    align-self: center;
+}
+
+section.text div.twocol p{
+    padding:0;
+}
+
+#needpadding{
+    padding:2rem;
+}
+
+#usdatop{
+    padding:4rem;
 }
 
 
@@ -601,8 +619,11 @@ section video {
     
 
     section.text h2, section.text h3, section.text p, section ul{
-        padding:0rem 15vw 1rem;
+        padding-left:15vw;
+        padding-right: 15vw;
     }
+
+
 
     #beforeafter{
         width:100%;
@@ -628,7 +649,7 @@ section video {
     }
 
     h2{
-        font-size: 2.5vw;
+        font-size: 2.7vw;
         /* font-weight: 600; */
         /* padding-bottom: 0.5rem; */
     }
@@ -689,6 +710,9 @@ section video {
         display: grid;
         grid-template-columns: 50% 50%;
         /* padding:2rem 0; */
+    }
+    .twocol img{
+        justify-self: center;
     }
     .prototype{
         width: 60vw;

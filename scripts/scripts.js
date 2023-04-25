@@ -109,8 +109,16 @@ window.onscroll = function() {
 
   let Scrollpos = window.pageYOffset;
   let scrollposbottom = Scrollpos + screen.height;
+
   // console.log(Scrollpos+screen.availHeight);
+  // // console.log(sec4.offsetTop)
+  // console.log(Scrollpos)
+  // console.log(typeof(Scrollpos))
+  // console.log(scrollposbottom)
+  // console.log(typeof(scrollposbottom))
   // console.log(sec4.offsetTop)
+  // console.log(typeof(sec4.offsetTop))
+
 
   if (Scrollpos < 60) {
     document.querySelector("header").style.top = "0";
@@ -120,67 +128,88 @@ window.onscroll = function() {
   }
   if (sec1) {
   if (Scrollpos >= sec1.offsetTop && Scrollpos < sec2.offsetTop) {
-  document.querySelector('#index1 .blackpoint').style.display="inline";
-  document.querySelector('#index1 .circlepoint').style.display="none";
+    document.querySelector('#index1 .blackpoint').style.display="inline";
+    document.querySelector('#index1 .circlepoint').style.display="none";
 
   document.querySelector('#index2 .blackpoint').style.display="none";
   document.querySelector('#index2 .circlepoint').style.display="inline";
 
-  document.querySelector('#index3 .blackpoint').style.display="none";
+  if (id3){
+    document.querySelector('#index3 .blackpoint').style.display="none";
   document.querySelector('#index3 .circlepoint').style.display="inline";
-
+  }
+  
   document.querySelector('#index4 .blackpoint').style.display="none";
   document.querySelector('#index4 .circlepoint').style.display="inline";
 
-  } else if (Scrollpos >= sec2.offsetTop && Scrollpos < sec3.offsetTop){
+
+
+  } else if (Scrollpos >= sec2.offsetTop && scrollposbottom < sec3.offsetTop){
+
     document.querySelector('#index1 .blackpoint').style.display="none";
     document.querySelector('#index1 .circlepoint').style.display="inline";
-  
+
     document.querySelector('#index2 .blackpoint').style.display="inline";
     document.querySelector('#index2 .circlepoint').style.display="none";
-  
-    document.querySelector('#index3 .blackpoint').style.display="none";
-    document.querySelector('#index3 .circlepoint').style.display="inline";
+
+
+    if (id3){
+      document.querySelector('#index3 .blackpoint').style.display="none";
+      document.querySelector('#index3 .circlepoint').style.display="inline";
+    }
+
   
     document.querySelector('#index4 .blackpoint').style.display="none";
     document.querySelector('#index4 .circlepoint').style.display="inline";
 
 
-  } else if (Scrollpos >= sec3.offsetTop && Scrollpos < sec4.offsetTop){
+  
+
+
+  } else if (scrollposbottom >= sec3.offsetTop && scrollposbottom < sec4.offsetTop){
     document.querySelector('#index1 .blackpoint').style.display="none";
     document.querySelector('#index1 .circlepoint').style.display="inline";
   
     document.querySelector('#index2 .blackpoint').style.display="none";
     document.querySelector('#index2 .circlepoint').style.display="inline";
   
-    document.querySelector('#index3 .blackpoint').style.display="inline";
-    document.querySelector('#index3 .circlepoint').style.display="none";
-  
+    if(id3){
+      document.querySelector('#index3 .blackpoint').style.display="inline";
+      document.querySelector('#index3 .circlepoint').style.display="none";
+    }
+
+
     document.querySelector('#index4 .blackpoint').style.display="none";
     document.querySelector('#index4 .circlepoint').style.display="inline";
 
+    // console.log('imin3')
+  } else if (scrollposbottom >= sec4.offsetTop) {
 
-  } else if (scrollposbottom >= sec4.offsetTop){
+    // console.log('imin4')
+
+
     document.querySelector('#index1 .blackpoint').style.display="none";
     document.querySelector('#index1 .circlepoint').style.display="inline";
   
     document.querySelector('#index2 .blackpoint').style.display="none";
     document.querySelector('#index2 .circlepoint').style.display="inline";
-  
-    document.querySelector('#index3 .blackpoint').style.display="none";
-    document.querySelector('#index3 .circlepoint').style.display="inline";
-  
+    if (id3) {
+      document.querySelector('#index3 .blackpoint').style.display="none";
+      document.querySelector('#index3 .circlepoint').style.display="inline";
+    }
+    
+
     document.querySelector('#index4 .blackpoint').style.display="inline";
     document.querySelector('#index4 .circlepoint').style.display="none";
-
+  
 
   }
 
   }
 }
 
-const gallery = document.querySelectorAll('.gallery');
-const arrow = document.querySelector('#sscontainer i')
+// const gallery = document.querySelectorAll('.gallery');
+// const arrow = document.querySelector('#sscontainer i')
 
 // gallery.forEach((e) =>{
 //   e.currentTarget.on("scroll", function (e) {
