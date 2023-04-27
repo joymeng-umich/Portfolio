@@ -503,11 +503,12 @@ section{
 section.title{
 
     padding:1rem 15vw ;
+    text-align: center;
 }
 
 
 section.title h1{
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     
 }
 
@@ -612,10 +613,7 @@ section.text div.twocol p{
     } */
 
 
-    
-    section.title{
-        padding-top: 0.5rem;
-    }
+
     
 
     section.text h2, section.text h3, section.text p, section ul{
@@ -704,6 +702,10 @@ section.text div.twocol p{
 
     .indexes{
         padding-right: 1rem;
+    }
+
+    section.title{
+        padding-top: 2rem;
     }
     
     .twocol{
