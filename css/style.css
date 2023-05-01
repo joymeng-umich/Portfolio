@@ -230,6 +230,10 @@ html {
     padding:5% 10% 0 10%
 
 }
+#about li{
+    text-align: end;
+    font-weight: 600;
+}
 
 h1.about{
 
@@ -239,6 +243,8 @@ h1.about{
     padding-bottom: 2rem;
 
 }
+
+
 
 #name{
     display:inline;
