@@ -10,12 +10,21 @@ p, li{
     font-weight: 300;
 }
 
+header p{
+    cursor: pointer;
+}
+
 br{
     padding-bottom: 1rem;
 }
 h1{
     font-size: 1.3rem;
     font-weight: 800;
+}
+
+#greeting{
+    text-align: center;
+    padding:10vh 10vw 5vh;
 }
 
 h2{
@@ -28,9 +37,9 @@ h2{
 h3
 {
     font-size: 1rem;
-    font-weight: 600    ;
+    font-weight: 600;
 
-    padding-top: 0.5rem;
+    padding-top: 1rem;
 }
 
 b{
@@ -528,10 +537,15 @@ section img{
 }
 
 section video {
+    margin-top: 2rem;
     align-self: center;
     width:80vw;
-    max-width: 300px;
+
     padding-bottom: 2rem;
+}
+
+#prototype_vid{
+    max-width: 300px;
 }
 
 .prototype{
@@ -563,7 +577,7 @@ section.text div.twocol p{
 }
 
 #usdatop{
-    padding:4rem;
+    padding:1rem;
 }
 
 
@@ -719,4 +733,9 @@ section.text div.twocol p{
     .prototype{
         width: 60vw;
     }
+
+    #usdatop{
+        padding:6vw;
+    }
+    
 }
