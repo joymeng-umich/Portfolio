@@ -280,6 +280,15 @@ h1.about{
     animation: shake 5s infinite;
     font-weight: 600;
 }
+
+/* #edu{
+    display: none;
+}
+
+#skill{
+    display: none;
+} */
+
 /* 
 @keyframes shake{
     0% { transform: rotate(0deg); }
@@ -819,10 +828,12 @@ section.text div.twocol p{
 
 #edu{
     padding:0 3vw 0 8vw;
+    display: block;
 }
 
 #skill{
     padding:0 5vw 0 0;
+    display: block;
 }
 
  
@@ -868,6 +879,8 @@ section.text div.twocol p{
     #usdatop{
         padding:6vw;
     }
+
+
     
 
     /* #about > div{
