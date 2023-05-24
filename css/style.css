@@ -107,6 +107,10 @@ nav a {
     line-height: 2.5rem;
 }
 
+#jianli{
+    width: 140px;
+
+}
 .current{
     text-decoration: underline;
     text-underline-offset: 0.3rem;
